@@ -12,3 +12,21 @@ export function createLink(text, href, className = '') {
     if (className) link.className = className;
     return link;
 }
+
+export function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+export function createButton(text, onClick, className = '') {
+    const button = createElement('button', text, className);
+    button.onclick = onClick;
+    return button;
+}

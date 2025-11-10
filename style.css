@@ -4,3 +4,75 @@ body {
     padding: 20px;
     background-color: #fca635;
 }
+
+.breadcrumbs {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.breadcrumbs a {
+    color: #0066cc;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #666;
+    margin: 0 5px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.list {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.item {
+    border: 1px solid #e0e0e0;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+.item h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}

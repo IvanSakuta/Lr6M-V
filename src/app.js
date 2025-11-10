@@ -1,4 +1,5 @@
 import { createElement } from './utils/dom.js';
+import { showUsersPage } from './pages/users.js';
 
 const app = document.getElementById('app');
 
@@ -7,7 +8,7 @@ function router() {
     app.innerHTML = '';
     
     if (hash === '#users' || hash === '') {
-        app.appendChild(createElement('h1', 'Пользователи'));
+        showUsersPage(app);
     } else {
         app.appendChild(createElement('h1', 'Страница не найдена'));
     }
