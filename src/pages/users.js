@@ -13,7 +13,10 @@ export async function showUsersPage(app) {
     const nav = createElement('div', '', 'navigation');
     nav.appendChild(createElement('p', 'Перейти к:'));
     nav.appendChild(createLink('Списку задач', '#users#todos'));
+    nav.appendChild(createElement('span', ' | '));
+    nav.appendChild(createLink('Постам', '#users#posts'));
     app.appendChild(nav);
+    
     
     app.appendChild(createAddUserForm(() => displayUsers(app)));
     

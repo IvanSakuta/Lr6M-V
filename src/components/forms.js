@@ -32,7 +32,7 @@ export function createAddUserForm(onUserAdded) {
         if (name && email && phone) {
             const customUsers = getCustomUsers();
             const apiUsers = await getUsers();
-            const validation = isUserUnique(name, email, customUsers, apiUsers);
+            const validation = isUserUnique(name, email, phone, customUsers, apiUsers);
             
             if (!validation.isUnique) {
                 errorMessage.textContent = validation.message;
