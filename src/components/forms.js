@@ -1,5 +1,7 @@
 import { createElement, createButton } from '../utils/dom.js';
 import { getCustomUsers, saveCustomUsers } from '../utils/storage.js';
+import { isUserUnique } from '../utils/validation.js';
+import { getUsers } from '../api/users.js';
 
 
 export function createAddUserForm(onUserAdded) {
@@ -28,8 +30,15 @@ export function createAddUserForm(onUserAdded) {
         const phone = phoneInput.value.trim();
         
         if (name && email && phone) {
-           
+            const customUsers = getCustomUsers();
+            const apiUsers = await getUsers();
+            const validation = isUserUnique(name, email, customUsers, apiUsers);
             
+            if (!validation.isUnique) {
+                errorMessage.textContent = validation.message;
+                errorMessage.style.display = 'block';
+                return;
+            }
             
             addNewUser(name, email, phone);
             nameInput.value = '';

@@ -14,7 +14,7 @@ body {
 }
 
 .breadcrumbs a {
-    color: #0066cc;
+    color: #634103;
     text-decoration: none;
     margin: 0 5px;
     font-weight: bold;
@@ -39,40 +39,121 @@ body {
 }
 
 .list {
-    background: white;
+    background: #c48208;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .item {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #ec9e0c;
     margin: 10px 0;
     padding: 15px;
     border-radius: 5px;
-    background: #fafafa;
+    background: #f19f23;
 }
 
 .item h3 {
     margin: 0 0 10px 0;
-    color: #333;
+    color: #ffffff;
 }
 
 .item p {
     margin: 5px 0;
-    color: #666;
+    color: #ffffff;
 }
 
 .delete-btn {
     background: #dc3545;
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 .delete-btn:hover {
     background: #c82333;
+}
+
+.add-form {
+    background: #c48208;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.add-form input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.add-form button {
+    background: #a86e03;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-form button:hover {
+    background: #da910a;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+h1 {
+    color: #ffffff;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+}
+
+.navigation {
+    margin: 15px 0;
+}
+
+.navigation a {
+    color: #533a02;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.count-info {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #666;
+}
+
+.action-btn{
+    background: #da910a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.action-btn:hover{
+    background: #f0a51a;
 }
