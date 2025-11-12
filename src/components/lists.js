@@ -57,3 +57,42 @@ export function showTodosList(todos, onTodoDeleted) {
     
     return list;
 }
+
+export function showPostsList(posts, onPostDeleted) {
+    const list = createElement('div', '', 'list');
+    
+    if (posts.length === 0) {
+        list.appendChild(createElement('p', 'Посты не найдены'));
+        return list;
+    }
+    
+    posts.forEach(post => {
+        const item = createElement('div', '', 'item post-item');
+        item.appendChild(createElement('h3', post.title));
+        item.appendChild(createElement('p', post.body));
+        
+        list.appendChild(item);
+    });
+    
+    return list;
+}
+
+export function showCommentsList(comments) {
+    const list = createElement('div', '', 'list');
+    
+    if (comments.length === 0) {
+        list.appendChild(createElement('p', 'Комментарии не найдены'));
+        return list;
+    }
+    
+    comments.forEach(comment => {
+        const item = createElement('div', '', 'item comment-item');
+        item.appendChild(createElement('h3', comment.name));
+        item.appendChild(createElement('p', `Email: ${comment.email}`));
+        item.appendChild(createElement('p', comment.body));
+        
+        list.appendChild(item);
+    });
+    
+    return list;
+}
